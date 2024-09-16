@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "QR Code for Firefox",
+  "version": "1.1.2.1",
+  "description": "QR Code for Firefox generates QR codes independently, simple and fast, and can be generated immediately for 256 colors of any size\uff08below 320px by 320px\uff09\u3002",
+  "icons": {
+    "48": "icons/Super_QR-48.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_icon": {
+      "32": "icons/Super_QR-32.png"
+    },
+    "default_title": "QR Code for Firefox",
+    "default_popup": "popup/SuperQR.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*"
+      ],
+      "matches": []
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "netshow-vip@sohu.com"
+    }
+  }
+}

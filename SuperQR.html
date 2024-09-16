@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link rel="stylesheet" href="SuperQR.css"/>
+    <script src="jquery.min.js"></script>
+    <script src="qrcode.min.js"></script>
+  </head>
+
+<body>
+  <div class="outer-wrapper" style='position: relative;'>
+    <div class="new-note" style='text-align:center;overflow:hidden;border:0px dashed rgb(202, 200, 200);border-radius:5px;'>
+      
+      <div class="note-container" style="width:238px;height:auto;margin:0 auto;padding:4px!important;margin-bottom:3px;text-align:center">
+          <div style="text-align:center;padding:5px;margin:0 auto;border:0px dashed rgb(202, 200, 200);border-radius:3px;" id="qrcode"  width=auto height=auto>
+				<img style="display:none;" src="https://addons.mozilla.org/user-media/addon_icons/2827/2827535-64.png" class="qrcode__logo">
+          </div>
+		  
+      </div>
+      <div style="text-align:center;padding:4px;margin:0 auto;border-radius:5px;" id="div_area"  width=100% height=100%>
+	 
+	  <textarea title="Current Page URL" id="currentAddress" class="currentAddress" style='height:4rem;color:#444'></textarea> <br>
+      QR Code Size &nbsp;
+	  <input style='width:18%;margin-top:4px;height:28px;color:#555' type="text" value='320' id="bigsmall" />&nbsp;(Px)
+	   <div id='tip' style="display:none;background:#FFFFCD;font-size:10px;height:26px;line-height:16px;padding:3px;color: #9C661F;border:1px solid  #E3CF57">
+		<img style="width:16px;height:16px;" src="../icons/x2.png">&nbsp;Exceeding the maximum value of 320.
+	  </div>
+      <br>
+	  <div style='float:left;width:47%'>
+      ForeColor<br>
+	  <select id="fc" style='width:69%;line-height: 2.5;height:2em;color:#444'>
+	    <option value="black" style='color:black'>black</option>
+		<option value="white" style='color:white'>white</option>
+		<option value="blue" style='color:blue'>blue</option>
+		<option value="fuchsia" style='color:fuchsia'>fuchsia</option>
+		<option value="gray" style='color:gray'>gray</option>
+		<option value="green" style='color:green'>green</option>
+		<option value="lime" style='color:lime'>lime</option>
+		<option value="maroon" style='color:maroon'>maroon</option>
+		<option value="navy" style='color:navy'>navy</option>
+		<option value="olive" style='color:olive'>olive</option>
+		<option value="purple" style='color:purple'>purple</option>
+		<option value="red" style='color:red'>red</option>
+		<option value="silver" style='color:silver'>silver</option>
+		<option value="teal" style='color:teal'>teal</option>
+		<option value="aqua" style='color:aqua'>aqua</option>
+		<option value="yellow" style='color:yellow'>yellow</option>
+	  </select>
+	  </div>
+      <div style='float:right;width:47%'>
+      BackColor<br>
+	  <select id="bc" style='width:69%;line-height: 2.5;height:2em;color:#444'>
+		<option value="white" style='background-color:white'>white</option>
+		<option value="black" style='background-color:black'>black</option>
+		<option value="olive" style='background-color:olive'>olive</option>
+		<option value="purple" style='background-color:purple'>purple</option>
+		<option value="red" style='background-color:red'>red</option>
+		<option value="silver" style='background-color:silver'>silver</option>
+		<option value="teal" style='background-color:teal'>teal</option>
+		<option value="yellow" style='background-color:yellow'>yellow</option>
+		<option value="aqua" style='background-color:aqua'>aqua</option>
+		<option value="blue" style='background-color:blue'>blue</option>
+		<option value="fuchsia" style='background-color:fuchsia'>fuchsia</option>
+		<option value="gray" style='background-color:gray'>gray</option>
+		<option value="green" style='background-color:green'>green</option>
+		<option value="lime" style='background-color:lime'>lime</option>
+		<option value="maroon" style='background-color:maroon'>maroon</option>
+		<option value="navy" style='background-color:navy'>navy</option>
+	  </select>
+	  <br>
+	  	  
+	  </div>
+	  
+	  <div class="clearfix"></div>
+	  		
+	  </div><br>
+	  <hr>
+	 
+	  <div id='s' title="QR Code with logo" style='margin-top:18px;margin-bottom:15px; display: flex; width:94%;height: 3em;border: 1px;'>
+		<label for='logo_path'>QR Logo URL:
+		<!--<input style="" name='logo_option' id="logo_option" type='checkbox'>-->
+		</label>
+		<input style="" name='logo_path' id="logo_path" placeholder="https://addons.mozilla.org/user-media/addon_icons/2827/2827535-64.png">
+	  </div>
+      <button value="DIY " id="diy" class="save" style='margin-bottom:19px!important;color:white;align-items: center;background: #0060df;border: 1px solid transparent;border-radius: 2px;cursor: pointer;display: inline-flex;font-family: Inter,sans-serif;font-style: normal;font-weight: 400;height: 41px; justify-content: center;line-height: 1.2;margin: 0;margin-top:10px;padding: 0 8px;text-decoration: none;transition-duration: all 1.05s,padding .15s;transition-property: background-color border-color color;transition-timing-function: cubic-bezier(.07,.95,0,1);'>&nbsp;Generate QR Code&nbsp;</button>
+	  
+	  <!--<div id='cfg' style='width:24px;height:24px;float:left;bottom:20px;position: absolute;border:1px solid gray;'></div>-->
+	  </div>
+      <div class="clearfix"></div>
+	  
+    </div>
+    
+  </div>
+
+  <script src="SuperQR.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+/* General styling */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter;
+  font-size: 12px;
+  background: #dedede;
+  height:100%;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  background: #dedede;
+  margin: 0 auto;
+  margin-top:1px;
+  padding: 2px;
+  height: inherit;
+  color:#444;
+  
+}
+
+.outer-wrapper {
+  /*overflow: auto;*/
+  width: 100%;
+  height: 100%;
+  background: rgb(240,240,240);
+  margin-bottom:1px;
+  
+  border-radius:5px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* form control styling */
+
+input, textarea, button {
+  border: 1px solid rgb(218,218,218);
+  padding: 4px;
+  background: white;
+  border-radius: 3px;
+}
+
+button {
+  background: #ccc;
+  
+  transition: 0.1s all;
+  
+  border:1px solid rgb(218,218,218);
+}
+
+#diy:hover{background:blue!important;}
+
+button:hover, button:focus {
+  background: #ddd;
+}
+
+button:active {
+  
+}
+
+input, textarea {
+  font-family:  Metropolis;
+  
+  border:1px solid rgb(218,218,218);
+
+}
+
+/* Typography */
+
+h2 {
+  font-size: 1.3rem;
+}
+
+p, input, textarea {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* New notes entry box */
+
+.new-note {
+  width: 100%;
+  margin-bottom: 1px;
+  padding: 0px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+textarea {
+  width: 80%;
+  margin-bottom: 4px;
+  resize: none;
+}
+
+.clear {
+  float: left;
+}
+
+.add {
+  float: right;
+}
+
+/* Notes display box(es) */
+
+.note {
+  padding: 2px;
+}
+
+.delete {
+  float: right;
+}
+
+p {
+  margin: 0;
+}
+
+.cancel {
+  float: left;
+}
+
+.update {
+  float: right;
+}
+
+#qrcode{
+	
+    border:1px solid rgb(218,218,218);
+    background: linear-gradient(to left, #fff, #fff) left top no-repeat,
+    linear-gradient(to bottom, #fff, #fff) left top no-repeat,
+    linear-gradient(to left, white,white) right top no-repeat,
+    linear-gradient(to bottom, white, white) right top no-repeat,
+    linear-gradient(to left, white, white) left bottom no-repeat,
+    linear-gradient(to bottom, white, white) left bottom no-repeat,
+    linear-gradient(to left, white, white) right bottom no-repeat,
+    linear-gradient(to left, white, white) right bottom no-repeat;
+    background-size: 20px 119px, 119px 20px, 20px 119px, 119px 20px;
+	position: relative;
+  }
+  
+#fc{
+	
+	border:1px solid rgb(218,218,218);
+}
+
+#bc{
+	
+	border:1px solid rgb(218,218,218);
+}
+
+.qrcode__logo {
+  width: 20%;
+  height: 20%;
+  border-radius: 10%;
+  border: 0px solid gray;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background:white;
+  padding:4px;
+}
+
+#qrcode canvas + img {
+
+}
